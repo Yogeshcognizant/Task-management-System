@@ -1,5 +1,3 @@
-
-
 from flask import Flask
 from tasks.email_reminder import send_reminder
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -7,7 +5,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 app = Flask(__name__)
 
 def schedule_task():
- send_reminder()
+    send_reminder()
 
 scheduler = BackgroundScheduler()
 scheduler.add_job(func=schedule_task, trigger="interval", hours=1)
@@ -15,10 +13,10 @@ scheduler.start()
 
 @app.route('/')
 def home():
- return "Flask server running. Sending emails every 1 hour!"
+    return "Flask server running. Sending emails every 1 hour!"
 
 if __name__ == "__main__":
- try:
- app.run(port=5000)
- except (KeyboardInterrupt, SystemExit):
- scheduler.shutdown()
+    try:
+        app.run(port=5000)
+    except (KeyboardInterrupt, SystemExit):
+scheduler.shutdown()
