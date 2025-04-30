@@ -1,5 +1,5 @@
 from flask import Flask
-from tasks.email_reminder import send_reminder
+from tasks.email_remainder import send_remainder
 from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
@@ -8,7 +8,7 @@ def schedule_task():
     send_reminder()
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(func=schedule_task, trigger="interval", hours=1)
+scheduler.add_job(func=send_remainder, trigger="interval", hours=1)
 scheduler.start()
 
 @app.route('/')
