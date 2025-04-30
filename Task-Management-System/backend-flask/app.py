@@ -5,7 +5,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 app = Flask(__name__)
 
 def schedule_task():
-    send_reminder()
+    send_remainder()
 
 scheduler = BackgroundScheduler()
 scheduler.add_job(func=send_remainder, trigger="interval", hours=1)
