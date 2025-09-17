@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.16",
+  "version": "1.0.0",
+  "id": "your-bot-app-id-here",
+  "packageName": "com.skysecure.interviewbot",
+  "developer": {
+    "name": "SkySecure",
+    "websiteUrl": "https://www.skysecure.com",
+    "privacyUrl": "https://www.skysecure.com/privacy",
+    "termsOfUseUrl": "https://www.skysecure.com/terms"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "Interview Scheduler",
+    "full": "SkySecure Interview Scheduling Bot"
+  },
+  "description": {
+    "short": "AI-powered bot to schedule interviews at 6 PM",
+    "full": "An intelligent bot that helps schedule interviews automatically at 6 PM when mentioned in Teams chat conversations."
+  },
+  "accentColor": "#FFFFFF",
+  "bots": [
+    {
+      "botId": "your-bot-app-id-here",
+      "scopes": [
+        "personal",
+        "team",
+        "groupchat"
+      ],
+      "supportsFiles": false,
+      "isNotificationOnly": false
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "your-bot-domain.com"
+  ]
+}
